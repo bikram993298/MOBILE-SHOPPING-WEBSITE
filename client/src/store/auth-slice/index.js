@@ -76,18 +76,16 @@ export const logoutUser = createAsyncThunk(
 // );
 
 
-export const checkAuth = createAsyncThunk(
-  "/auth/checkauth",
 
-  async () => {
+export const checkAuth = createAsyncThunk(
+  'auth/checkauth',
+  async (token) => {
     const response = await axios.get(
       `${import.meta.env.VITE_API_URL}/api/auth/check-auth`,
       {
-      
         headers: {
-          Authorization:`Bearer ${token}`,
-          "Cache-Control":
-            "no-store, no-cache, must-revalidate, proxy-revalidate",
+          Authorization: `Bearer ${token}`,
+          "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
         },
       }
     );
@@ -95,6 +93,7 @@ export const checkAuth = createAsyncThunk(
     return response.data;
   }
 );
+
 
 const authSlice = createSlice({
   name: "auth",
