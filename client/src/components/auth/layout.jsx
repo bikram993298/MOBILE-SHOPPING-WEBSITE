@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import { SmartphoneCharging } from "lucide-react"; // Import the SmartphoneCharging icon
 
 function AuthLayout() {
   return (
@@ -9,8 +8,6 @@ function AuthLayout() {
           <h1 className="text-4xl font-extrabold tracking-tight">
             Welcome to SmartPhone Shopping
           </h1>
-          {/* Add the SmartphoneCharging icon here */}
-          <SmartphoneCharging className="w-12 h-12 mx-auto text-white" />
         </div>
       </div>
       <div className="flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
