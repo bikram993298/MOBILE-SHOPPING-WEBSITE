@@ -2,7 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": ["src/*"]
+    },
+    "target": "es6",                     // Adjust target as needed
+    "module": "commonjs",                // Adjust module as needed
+    "strict": true,                       // Enable strict type checking
+    "esModuleInterop": true,              // Enable interoperability with CommonJS
+    "skipLibCheck": true                  // Optional, to skip type checking of declaration files
+  },
+  "include": ["src/**/*"],                // Adjust include paths as necessary
+  "exclude": ["node_modules", "**/*.spec.ts"] // Adjust exclude paths as necessary
 }
